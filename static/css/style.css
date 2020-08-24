@@ -13,6 +13,7 @@ body {
     padding: 24px;
 }
 
+/* ESTABLISH COLORS */
 :root {
     --light-grayish-violet: hsl(270, 20%, 96%);
     --dark-grayish-violet: hsl(270, 7%, 64%);
@@ -23,6 +24,7 @@ body {
     --very-dark-desaturated-violet: hsl(271, 36%, 24%);
 }
 
+/* BACKGROUND BUBBLE/S */
 .background-bubble {
     position: absolute;
     z-index: 1;
@@ -32,6 +34,17 @@ body {
     top: 0;
     left: -50vw;
     background-image: linear-gradient(to top, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+}
+
+/* MAIN CONTAINER */
+.main-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* IPHONE CONTAINER */
+.iphone-container {  
+    margin-top: 30px;
 }
 
 .iphone {
@@ -44,7 +57,6 @@ body {
     background-color: #fff;
     position: relative;
     margin: 0 auto;
-    margin-top: 30px;
     z-index: 1;
 }
 
@@ -60,6 +72,7 @@ body {
     border-radius: 20px;
 }
 
+/* IPHONE CONTENT */
 .iphone__content {
     background-color: var(--light-grayish-violet);
     height: 595px;
@@ -130,6 +143,7 @@ body {
     fill: #fff;
 }
 
+/* MESSAGES */
 .app-messages {
     padding: 12px 12px 0 12px;
     display: flex;
@@ -217,6 +231,7 @@ input[type=radio] {
     font-weight: 600;
 }
 
+/* APP TEEXTBOX */
 .app-textbox {
     padding: 12px;
     position: relative;
@@ -270,7 +285,8 @@ input::placeholder {
     margin-top: 24px;
 }
 
-.text-center {
+.main-text__header,
+.main-text__content {
     text-align: center;
 }
 
@@ -293,4 +309,58 @@ input::placeholder {
     padding-bottom: 12px;
     margin: 0 auto;
     width: calc(100% - 48px);
+}
+
+/* BIGGER DEVICES */
+@media only screen and (min-width: 1024px) {
+    body {
+        padding: unset;
+    }
+
+    .background-bubble {
+        width: 32vw;
+        left: -7vw;
+    }
+
+    .main-container {
+        height: 100vh;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        /* background-color: black; */
+    }
+
+    .iphone-container {
+        width: 50%;
+        margin: unset;
+        justify-content: flex-end;
+        display: flex;
+    }
+
+    .iphone {
+        margin: unset;
+    }
+
+    .main-text {
+        z-index: 4;
+        width: 50%;
+        margin: 0;
+        /* background-color: white; */
+        /* border: 1px solid black; */
+        padding: 54px;
+    }
+
+    .main-text__content,
+    .main-text__header {
+        text-align: left;
+        padding: unset;
+    }
+
+    .main-text__content {
+        margin-top: 12px;
+    }
+
+    .attribution {
+        width: 100%;
+    }
 }

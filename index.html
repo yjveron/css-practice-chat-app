@@ -18,88 +18,92 @@
 </head>
 <body>
   <div class="background-bubble"></div>
-  <div class="iphone">
-    <div class="iphone__notch"></div>
-    <div class="iphone__content">
-      <div class="app-header">
-        <div class="app-header--left">
-          <div class="arrow"><img class="left-arrow" src="./static/svg/left-arrow.svg"/></div>
-          <div class="user-pic"><img class="avatar" src="./images/avatar.jpg"/></div>
-          <div class="user-details">
-            <div class="user-details__name">
-              Samuel Green
-            </div>
-            <div class="user-details__status">
-              Available to Walk
+  <div class="main-container">
+    <div class="iphone-container">
+    <div class="iphone">
+      <div class="iphone__notch"></div>
+      <div class="iphone__content">
+        <div class="app-header">
+          <div class="app-header--left">
+            <div class="arrow"><img class="left-arrow" src="./static/svg/left-arrow.svg"/></div>
+            <div class="user-pic"><img class="avatar" src="./images/avatar.jpg"/></div>
+            <div class="user-details">
+              <div class="user-details__name">
+                Samuel Green
+              </div>
+              <div class="user-details__status">
+                Available to Walk
+              </div>
             </div>
           </div>
+          <div class="app-header--right"><img class="three-dots" src="./static/svg/three-dots.svg"/></div>
         </div>
-        <div class="app-header--right"><img class="three-dots" src="./static/svg/three-dots.svg"/></div>
-      </div>
-      <div class="app-messages">
-        <div class="app-messages__bubble app-messages__bubble--sender">
-            That sounds great. I'd be happy to discuss more.
+        <div class="app-messages">
+          <div class="app-messages__bubble app-messages__bubble--sender">
+              That sounds great. I'd be happy to discuss more.
+          </div>
+          <div class="app-messages__bubble app-messages__bubble--sender">
+              Could you send over some pictures of your dog, please?
+          </div>
+          <div class="image-set">
+              <img class="dog-thumbnail" src="./images/dog-image-1.jpg"/>
+              <img class="dog-thumbnail" src="./images/dog-image-2.jpg"/>
+              <img class="dog-thumbnail" src="./images/dog-image-3.jpg"/>
+          </div>
+          <div class="app-messages__bubble app-messages__bubble--receiver">
+              Here are a few pictures. She’s a happy girl!
+          </div>
+          <div class="app-messages__bubble app-messages__bubble--receiver">
+              Can you make it?
+          </div>
+          <div class="app-messages__bubble app-messages__bubble--sender">
+              She looks so happy! The time we discussed works. How long shall I take her out for?
+          </div>
+          <div class="payment-option">
+            <label for="30-min">
+              <div class="payment-option--left">
+                <input type="radio" id="30-min" name="walk-type" value="30-min">
+                <span class="pseudo-radio-btn"></span>
+                30 minute walk
+              </div>
+              <div class="payment-option--right">
+                $29
+              </div>
+            </label>
+          </div>
+          <div class="payment-option">
+            <label for="1-hr">
+              <div class="payment-option--left">
+                <input type="radio" id="1-hr" name="walk-type" value="1-hr">
+                <span class="pseudo-radio-btn"></span>
+                1 hr walk
+              </div>
+              <div class="payment-option--right">
+                $49
+              </div>
+            </label>
+          </div>
         </div>
-        <div class="app-messages__bubble app-messages__bubble--sender">
-            Could you send over some pictures of your dog, please?
+        <div class="app-textbox">
+          <form action="">
+            <input type="text" name="new-message" class="app-textbox__input no-tap-highlight" placeholder="Type a message...">
+            <button class="send-message-btn">
+              <img class="right-arrow" src="./static/svg/right-arrow.svg" />
+            </button>
+          </form>
         </div>
-        <div class="image-set">
-            <img class="dog-thumbnail" src="./images/dog-image-1.jpg"/>
-            <img class="dog-thumbnail" src="./images/dog-image-2.jpg"/>
-            <img class="dog-thumbnail" src="./images/dog-image-3.jpg"/>
-        </div>
-        <div class="app-messages__bubble app-messages__bubble--receiver">
-            Here are a few pictures. She’s a happy girl!
-        </div>
-        <div class="app-messages__bubble app-messages__bubble--receiver">
-            Can you make it?
-        </div>
-        <div class="app-messages__bubble app-messages__bubble--sender">
-            She looks so happy! The time we discussed works. How long shall I take her out for?
-        </div>
-        <div class="payment-option">
-          <label for="30-min">
-            <div class="payment-option--left">
-              <input type="radio" id="30-min" name="walk-type" value="30-min">
-              <span class="pseudo-radio-btn"></span>
-              30 minute walk
-            </div>
-            <div class="payment-option--right">
-              $29
-            </div>
-          </label>
-        </div>
-        <div class="payment-option">
-          <label for="1-hr">
-            <div class="payment-option--left">
-              <input type="radio" id="1-hr" name="walk-type" value="1-hr">
-              <span class="pseudo-radio-btn"></span>
-              1 hr walk
-            </div>
-            <div class="payment-option--right">
-              $49
-            </div>
-          </label>
-        </div>
-      </div>
-      <div class="app-textbox">
-        <form action="">
-          <input type="text" name="new-message" class="app-textbox__input no-tap-highlight" placeholder="Type a message...">
-          <button class="send-message-btn">
-            <img class="right-arrow" src="./static/svg/right-arrow.svg" />
-          </button>
-        </form>
       </div>
     </div>
   </div>
-  
-  <div class="main-text">
-    <p class="text-center main-text__header">Simple booking</p>
-    <p class="text-center main-text__content">
-      Stay in touch with our dog walkers through the chat interface. This makes it easy to 
-      discuss arrangements and make bookings. Once the walk has been completed you can rate 
-      your walker and book again all through the chat.
-    </p>
+    
+    <div class="main-text">
+      <p class="main-text__header">Simple booking</p>
+      <p class="main-text__content">
+        Stay in touch with our dog walkers through the chat interface. This makes it easy to 
+        discuss arrangements and make bookings. Once the walk has been completed you can rate 
+        your walker and book again all through the chat.
+      </p>
+    </div>
   </div>
   
   <div class="attribution">
